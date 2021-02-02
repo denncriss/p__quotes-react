@@ -1,38 +1,104 @@
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background-color: var(--current-color);
+}
+.principal {
+  height: 100vh;
+  background-color: var(--current-color);
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+}
+.btn,
+.btn-icon {
+  padding: 0.6rem 3rem;
+  border-radius: 0.3rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.btn-icon {
+  padding: 0.6rem 0.7rem;
+  background-color: var(--current-color);
   color: white;
+  display: flex;
+  align-items: center;
+}
+.icon-twitter {
+  width: 1.4rem;
+}
+.btn:focus,
+.btn-icon:focus {
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.card-box {
+    max-width: 31.25rem;
+    background-color: white;
+    padding: 1.5rem 1.5rem;
+    color: var(--current-color);
+    border-radius: 0.9rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  .text-title {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .icon-quote {
+    width: 5rem;
+    position: absolute;
+    top: -.2rem;
+    left: 0;
+    opacity: 0.2;
   }
-  to {
-    transform: rotate(360deg);
+  .text-author {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    text-align: end;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
+    font-style: italic;
   }
-}
+  .text-author::before {
+    content: '';
+    width: 2rem;
+    height: 0.125rem;
+    border-radius: 10px;
+    display: inline;
+    background-color: var(--current-color);
+    color: #000;
+    position: relative;
+    top: 0.52rem;
+    margin-right: 0.5rem;
+  }
+  .card-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+  }
+  .btn-quote {
+    background-color: var(--current-color);
+    color: white;
+  }
+  @media (min-width: 768px) {
+    .text-title {
+      font-size: 1.6rem;
+    }
+    .card-box{
+      padding: 1.7rem 2rem;
+    }
+    .icon-quote {
+    width: 5.5rem;
+  }
+  }
